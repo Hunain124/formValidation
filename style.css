@@ -1,0 +1,79 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.container{
+    background: #c7c6c6;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container h2{
+    font-size: 40px;
+    padding-bottom: 20px;
+    /* border-bottom: 1px solid black; */
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: #fff;
+    padding: 30px 80px;
+    border-radius: 20px;
+    width: 40%;
+    height: 90vh;
+}
+.formControl{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    /* border: 1px solid red; */
+}
+.formControl input{
+    padding: 5px 10px;
+    border: 1px solid #c7c6c6;
+    border-radius: 5px;
+}
+.formControl input:focus{
+    outline: none;
+    border: 1px solid #45a8fa !important;
+}
+.formControl.success input:focus{
+    outline: none;
+    border: 1px solid green !important;
+}
+.formControl.error input:focus{
+    outline: none;
+    border: 1px solid #ff0000 !important;
+}
+.formControl small{
+    color: red;
+    display: none;
+}
+.formControl.issue small{
+    color: red;
+    display: block;
+}
+.form button{
+    padding: 10px 15px;
+    font-size: 18px;
+    background-color: #45a8fa;
+    border: 1px solid #45a8fa;
+    border-radius: 10px;
+    color: #fff;
+}
+.form button:hover{
+    padding: 10px 15px;
+    font-size: 18px;
+    background-color: transparent;
+    border: 1px solid #45a8fa;
+    border-radius: 10px;
+    color: #45a8fa;
+}
