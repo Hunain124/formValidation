@@ -28,6 +28,16 @@ function checkPassword(input,message){
     small.textContent = message;
 }
 
+// Check Length of username or password
+function checkLength (input,min,max) {
+    if(input.value.length < min){
+        througherror(input,`${input.id} must be above in ${min} letters`);
+    }else if (input.value.length > max){
+        througherror(input,`${input.id} must be in ${min} to ${max} lettes`)
+    }
+
+}
+
 // addEventListener
 form.addEventListener("submit", function (e){
     e.preventDefault();
@@ -53,4 +63,6 @@ form.addEventListener("submit", function (e){
     }else{
         noIssue(confirmPassword);
     };
+    checkLength(userName,3,10);
+    checkLength(password,6,30)
 })
